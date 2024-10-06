@@ -22,3 +22,23 @@
 
 7. mengisi data items
    - INSERT INTO items (name, description, price, stock, category_id) VALUES ('Sumsang b50', 'hape keren dari merek sumsang', 4000000, 100, 1), ('Uniklooh', 'baju keren dari brand ternama', 500000, 50, 2), ('IMHO Watch', 'jam tangan anak yang jujur banget', 2000000, 10, 1); 
+
+8. menampilkan data user kecuali password 
+   - SELECT id, name, email FROM users; 
+
+9. menampilkan data harga 
+   - SELECT * FROM items WHERE price > 1000000; 
+
+10. menampilkan semua pilihan yg dipilih dari kategori items
+    - SELECT * FROM items WHERE name LIKE "%uniklo%"; 
+
+11 menampilkan data items dengan kategosi joint
+   - SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name AS kategori FROM items JOIN categories ON items.category_id = categories.id; 
+
+12. mengupdate data harga pada satu produk 
+    -  UPDATE items SET price = 2500000 WHERE name = "Sumsang b50"; 
+
+
+
+
+
